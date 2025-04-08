@@ -13,7 +13,7 @@ eval_iters = 200
 n_embd = 64
 n_head = 16
 n_layer = 16
-dropout = 0.0
+dropout = 0.3
 # ------------
 
 torch.manual_seed(1337)
