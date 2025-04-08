@@ -11,15 +11,17 @@ learning_rate = 1e-3
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 n_embd = 64
-n_head = 4
-n_layer = 4
+n_head = 16
+n_layer = 16
 dropout = 0.0
 # ------------
 
 torch.manual_seed(1337)
 
 # wget https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
-with open('input.txt', 'r', encoding='utf-8') as f:
+data_path = r'E:\Shamman Files\AI projects\Andrej Karpathy\building gpt from scratch\datasets\banglish.txt'
+# data_path = r'input.txt'
+with open(data_path, 'r', encoding='utf-8') as f:
     text = f.read()
 
 # here are all the unique characters that occur in this text
